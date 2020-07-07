@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+<title>大选动态页面</title>
+<link href="大选动态页面.css" rel="stylesheet" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+<!--从左到右的js动画，for全部政党进度条-->
+<script>
+jQuery(document).ready(function(){
+	jQuery('.skillbar').each(function(){
+		jQuery(this).find('.skillbar-bar').animate({
+			width:jQuery(this).attr('data-percent')
+		},4000);
+	});
+});
+	
+jQuery(document).ready(function(){
+	jQuery('.program_skillbar').each(function(){
+		jQuery(this).find('.program_skillbar-bar').animate({
+			width:jQuery(this).attr('data-percent')
+		},4000);
+	});
+});	
+
+</script>
+
+<!--公司logo和菜单栏-->
+<div class="nzcm_logo">
+	<img src="Image/NZCM LOGO.png" width="200" alt=""/>
+	<a href="www.google.com"><img src="Image/icon/facebook_Icon.png" width="20" alt=""/></a>
+	<a href="www.google.com"><img src="Image/icon/instagram_Icon.png" width="20" alt=""/></a>
+	<a href="www.google.com"><img src="Image/icon/linkin_Icon.png" width="20" alt=""/></a>
+	<a href="www.google.com"><img src="Image/icon/pinterest_Icon.png" width="20" alt=""/></a>
+	<a href="www.google.com"><img src="Image/icon/twitter_Icon.png" width="20" alt=""/></a>
+	<a href="www.google.com"><img src="Image/icon/whatsapp_Icon.png" width="20" alt=""/></a>
+	<a href="www.google.com"><img src="Image/icon/youtube_Icon.png" width="20" alt=""/></a>
+</div>	
+	
+</head>
+
+<body>
+	
+<!--浮动按钮，控制从div1 到div2-->
+<button class="button_changing_page" onClick="switchVisible()">席位换算</button>
+	
+	
+<!--DIV1 大选的实时的得票率统计-->
+<div class="bar_block" id="Div1" style="display:block;">	
+	<h1 class="top_title" style="color: #FFFFFF;">2020年大选投票率统计</h1>	
+	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出10%票</h1>
+		<script>
+			var dt = new Date();
+			document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+		</script>
+	<div class="program_skillbar clearfix " data-percent="10%">
+		<div class="program_skillbar-bar" style="background: #D72E27;"></div>
+		<div class="program_skill-bar-percent"></div>
+	</div>
+	<div class="space"></div>
+	<div class="skillbar clearfix " data-percent="50%">
+		<div class="skillbar-title" style="background: #8c130d;"><span>工党</span></div>
+		<div class="skillbar-bar" style="background: #D72E27;"></div>
+		<div class="skill-bar-percent" id="labor_party_original">50%</div>
+		
+		<script>
+			 var labor_party_data = document.getElementById('labor_party_original').innerHTML
+		</script>
+		
+	</div>
+
+	<div class="skillbar clearfix " data-percent="38%">
+		<div class="skillbar-title" style="background: #0c4f7f;"><span>国家党</span></div>
+		<div class="skillbar-bar" style="background: #2583C3;"></div>
+		<div class="skill-bar-percent" id="national_party_original">38%</div>
+			
+		<script>
+			 var national_party_data = document.getElementById('national_party_original').innerHTML
+		</script>
+		
+	</div>
+
+	<div class="skillbar clearfix " data-percent="6%">
+		<div class="skillbar-title" style="background: #032f16;"><span>绿党</span></div>
+		<div class="skillbar-bar" style="background: #084924;"></div>
+		<div class="skill-bar-percent" id="green_party_original">6%</div>
+		
+		<script>
+			var green_party_data = document.getElementById('green_party_original').innerHTML
+		</script>
+	</div>
+
+	<div class="skillbar clearfix " data-percent="2%">
+		<div class="skillbar-title" style="background: #214321;"><span>优先党</span></div>
+		<div class="skillbar-bar" style="background: #666766;"></div>
+		<div class="skill-bar-percent" id="first_party_original">2%</div>
+		
+		<script>
+			 var first_party_data = document.getElementById('first_party_original').innerHTML
+		</script>
+		
+	</div>
+
+	<div class="skillbar clearfix " data-percent="1%">
+		<div class="skillbar-title" style="background: #980c13;"><span>毛利党</span></div>
+		<div class="skillbar-bar" style="background: #EA242D;"></div>
+		<div class="skill-bar-percent">1%</div>
+	</div>
+
+	<div class="skillbar clearfix " data-percent="3%">
+		<div class="skillbar-title" style="background: #a48804;"><span>行动党</span></div>
+		<div class="skillbar-bar" style="background: #FCD20C;"></div>
+		<div class="skill-bar-percent" id="act_party_original">3%</div>
+		
+		<script>
+			 var act_party_data = document.getElementById('act_party_original').innerHTML
+		</script>
+		
+	</div>
+
+	<div class="skillbar clearfix " data-percent="1%">
+		<div class="skillbar-title" style="background: #496e93;"><span>保守党</span></div>
+		<div class="skillbar-bar" style="background: #E0E1E2;"></div>
+		<div class="skill-bar-percent">1%</div>
+	</div>
+</div>	
+	
+<!--DIV2 换算为各党派席位统计-->
+<div id="Div2" style="display:none; background-color: #000000;">	
+	
+	<div style="height: 150px; width: 500px;position: relative; left:35%;">
+		<h1 class="top_title" style="color: #FFFFFF;  position: relative; top:50px;">新西兰议会席位换算统计</h1>
+	</div>
+	<div class="background_image_position">
+		<div class="background_image">
+			<span id="first_party_output" style="color: white; font-size: 40px;font-family: '.萍方-简'; position: absolute;top: 10px; left:150px;">01</span>
+			<span id="labor_party_output" style="color: white; font-size: 40px;font-family: '.萍方-简'; position: absolute;top: 132px; left:142px;">01</span>
+			<span id="green_party_output" style="color: white; font-size: 40px;font-family: '.萍方-简'; position: absolute;top: 260px; left:150px;">01</span>
+			<span id="national_party_output" style="color: white; font-size: 40px;font-family: '.萍方-简'; position: absolute;top: 99px; left:909px;">01</span>
+			<span id="act_party_output" style="color: white; font-size: 40px;font-family: '.萍方-简'; position: absolute;top: 237px; left:925px;">01</span>
+		</div>
+	</div>
+
+</div>
+
+	
+<!--自动席位换算-->
+<script>
+	var first_party_caculated = parseInt(first_party_data) /100 * 120
+	document.getElementById("first_party_output").innerHTML = parseInt(first_party_caculated)
+	
+	var labor_party_caculated = parseInt(labor_party_data) /100 * 120
+	document.getElementById("labor_party_output").innerHTML = parseInt(labor_party_caculated)
+	
+	var green_party_caculated = parseInt(green_party_data) /100 * 120
+	document.getElementById("green_party_output").innerHTML = parseInt(green_party_caculated)
+	
+	var naional_party_caculated = parseInt(national_party_data) /100 * 120
+	document.getElementById("national_party_output").innerHTML = parseInt(naional_party_caculated)
+	
+	var act_party_caculated = parseInt(act_party_data) /100 * 120
+	document.getElementById("act_party_output").innerHTML = parseInt(act_party_caculated)
+	
+	
+	
+	
+	
+</script>
+
+<!--切换头div，从大选实时得票率到换算成席位-->	
+<script>    	
+	function switchVisible() {
+		if (document.getElementById('Div1')) {
+
+			if (document.getElementById('Div1').style.display == 'none') {
+				document.getElementById('Div1').style.display = 'block';
+				document.getElementById('Div2').style.display = 'none';
+			}
+			else {
+				document.getElementById('Div1').style.display = 'none';
+				document.getElementById('Div2').style.display = 'block';
+			}
+		}
+}
+
+</script>	
+	
+	
+<!--2020 新西兰各党派政策table	-->
+<div style="margin-top: 50px;">	
+  <h1 class="top_title">2020年新西兰大选各党派政策</h1>
+
+  <p class="top_subtitle">更新时间: <span id="datetime1"></span></p>
+  <script>
+		var dt = new Date();
+		document.getElementById("datetime1").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+	</script>
+
+  <div>
+	<table>
+	  <thead>
+				<tr class="red">
+					<th class="table_first_title" style="width: 35px;"></th>
+					<th class="table_first_title" style="background-color: #D72E27; "><img src="image/1x/Asset 1.png" width="89" height="24" alt=""/><br>工党<br>Labour</th>
+					<th class="table_first_title" style="background-color: #2583C3; "><img src="image/1x/Asset 2.png" width="80" height="28" alt=""/><br>国家党<br>National</th>
+					<th class="table_first_title" style="background-color: #084924; width: 100px;"><img src="image/1x/Asset 3.png" width="57" height="19" alt=""/><br>绿党
+					<br>Green</th>
+					<th class="table_first_title" style="background-color: #666766; width: 100px;"><img src="image/1x/Asset 4.png" width="61" height="17" alt=""/><br>优先党<br>First</th>
+					<th class="table_first_title" style="background-color: #050606; width: 100px;"><img src="image/1x/Asset 5.png" width="56" height="17" alt=""/><br>毛利党<br>Maori</th>
+					<th class="table_first_title" style="background-color: #FCD20C; width: 100px; color: #24AAE2"><img src="image/1x/Asset 6.png" width="55" height="22" alt=""/><br>行动党<br>Act</th>
+					<th class="table_first_title" style="background-color: #E0E1E2; width: 100px; color: #000000;"><img src="image/1x/Asset 7.png" alt=""/><br>保守党<br>people's</th>
+				</tr>
+	  </thead>
+		<tr>
+			<td>经济政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>税收政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>移民政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>交通政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>治安政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>福利政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>教育政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>健康政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+		<tr>
+			<td>难民政策</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
+			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
+		</tr>
+
+	</table>
+  </div>
+</div>
+	
+</body>
+</html>
