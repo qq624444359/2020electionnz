@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=1024">
-<title>大选动态页面</title>
+<title>2020 election nz 新西兰大选</title>
 <link href="css/common.css" rel="stylesheet" type="text/css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -51,14 +51,22 @@ jQuery(document).ready(function(){
 <!--DIV1 大选的实时的得票率统计-->
 <div class="bar_block" id="div1" style="display:block;">	
 	<h1 class="top_title" style="color: #FFFFFF;">2020年大选投票率统计</h1>	
+<<<<<<< HEAD
 	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出0%票</h1>
+=======
+	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出1%票</h1>
+>>>>>>> 15f080ad37860533d89102b4a5ec494191b9da12
 		<script>
 			var dt = new Date();
 			document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 		</script>
 	
 	<!--2020年现场开票率统计-->
+<<<<<<< HEAD
 	<div class="program_skillbar clearfix " data-percent="0%">
+=======
+	<div class="program_skillbar clearfix " data-percent="1%">
+>>>>>>> 15f080ad37860533d89102b4a5ec494191b9da12
 		<div class="program_skillbar-bar" style="background: #D72E27;"></div>
 		<div class="program_skill-bar-percent"></div>
 	</div>
