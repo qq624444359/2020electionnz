@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=1024">
-<title>2020 election nz 新西兰大选</title>
+<title>大选动态页面</title>
 <link href="css/common.css" rel="stylesheet" type="text/css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -49,102 +49,81 @@ jQuery(document).ready(function(){
 	
 	
 <!--DIV1 大选的实时的得票率统计-->
-<div class="bar_block" id="div1" style="display:block;">	
+<div class="bar_block" id="Div1" style="display:block;">	
 	<h1 class="top_title" style="color: #FFFFFF;">2020年大选投票率统计</h1>	
-<<<<<<< HEAD
-
-	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出0%票</h1>
-=======
 	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出10%票</h1>
->>>>>>> parent of c870535... Update index.html
 		<script>
 			var dt = new Date();
 			document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 		</script>
-	<!--2020年现场开票率统计-->
-<<<<<<< HEAD
-
-	<div class="program_skillbar clearfix " data-percent="0%">
-
-	<div class="program_skillbar clearfix " data-percent="1%">
-
-=======
 	<div class="program_skillbar clearfix " data-percent="10%">
->>>>>>> parent of c870535... Update index.html
 		<div class="program_skillbar-bar" style="background: #D72E27;"></div>
 		<div class="program_skill-bar-percent"></div>
 	</div>
 	<div class="space"></div>
-	<!--2020年工党得票率统计-->
-	<div class="skillbar clearfix " data-percent="54.5%">
+	<div class="skillbar clearfix " data-percent="50%">
 		<div class="skillbar-title" style="background: #8c130d;"><span>工党</span></div>
 		<div class="skillbar-bar" style="background: #D72E27;"></div>
-		<div class="skill-bar-percent" id="labor_party_original">54.5%</div>
+		<div class="skill-bar-percent" id="labor_party_original">50%</div>
+		
 		<script>
 			 var labor_party_data = document.getElementById('labor_party_original').innerHTML
 		</script>
+		
 	</div>
-	
-	<!--2020年国家党得票率统计-->
-	<div class="skillbar clearfix " data-percent="27%">
+
+	<div class="skillbar clearfix " data-percent="38%">
 		<div class="skillbar-title" style="background: #0c4f7f;"><span>国家党</span></div>
 		<div class="skillbar-bar" style="background: #2583C3;"></div>
-		<div class="skill-bar-percent" id="national_party_original">27%</div>	
+		<div class="skill-bar-percent" id="national_party_original">38%</div>
+			
 		<script>
 			 var national_party_data = document.getElementById('national_party_original').innerHTML
 		</script>
+		
 	</div>
-	
-	<!--2020年绿党得票率统计-->
-	<div class="skillbar clearfix " data-percent="9%">
+
+	<div class="skillbar clearfix " data-percent="6%">
 		<div class="skillbar-title" style="background: #032f16;"><span>绿党</span></div>
 		<div class="skillbar-bar" style="background: #084924;"></div>
-		<div class="skill-bar-percent" id="green_party_original">9%</div>
+		<div class="skill-bar-percent" id="green_party_original">6%</div>
 		
 		<script>
 			var green_party_data = document.getElementById('green_party_original').innerHTML
 		</script>
 	</div>
 
-	<!--2020年行动党得票率统计-->
-	<div class="skillbar clearfix " data-percent="5%">
-		<div class="skillbar-title" style="background: #a48804;"><span>行动党</span></div>
-		<div class="skillbar-bar" style="background: #FCD20C;"></div>
-		<div class="skill-bar-percent" id="act_party_original">5%</div>
-		<script>
-			 var act_party_data = document.getElementById('act_party_original').innerHTML
-		</script>
-	</div>
-
-	<!--2020年优先党得票率统计-->
-	<div class="skillbar clearfix " data-percent="1.5%">
+	<div class="skillbar clearfix " data-percent="2%">
 		<div class="skillbar-title" style="background: #214321;"><span>优先党</span></div>
 		<div class="skillbar-bar" style="background: #666766;"></div>
-		<div class="skill-bar-percent" id="first_party_original">1.5%</div>
+		<div class="skill-bar-percent" id="first_party_original">2%</div>
+		
 		<script>
 			 var first_party_data = document.getElementById('first_party_original').innerHTML
 		</script>
+		
 	</div>
-	
-	<!--2020年毛利党得票率统计-->
+
 	<div class="skillbar clearfix " data-percent="1%">
 		<div class="skillbar-title" style="background: #980c13;"><span>毛利党</span></div>
 		<div class="skillbar-bar" style="background: #EA242D;"></div>
 		<div class="skill-bar-percent">1%</div>
 	</div>
 
+	<div class="skillbar clearfix " data-percent="3%">
+		<div class="skillbar-title" style="background: #a48804;"><span>行动党</span></div>
+		<div class="skillbar-bar" style="background: #FCD20C;"></div>
+		<div class="skill-bar-percent" id="act_party_original">3%</div>
+		
+		<script>
+			 var act_party_data = document.getElementById('act_party_original').innerHTML
+		</script>
+		
+	</div>
 
-	<!--2020年保守党得票率统计-->
 	<div class="skillbar clearfix " data-percent="1%">
 		<div class="skillbar-title" style="background: #496e93;"><span>保守党</span></div>
 		<div class="skillbar-bar" style="background: #E0E1E2;"></div>
-		<div class="skill-bar-percent">1%</div>
-	</div>
-	
-	<!--2020年机遇党得票率统计-->
-	<div class="skillbar clearfix " data-percent="1%">
-		<div class="skillbar-title" style="background: #687BAA;"><span>机遇党</span></div>
-		<div class="skillbar-bar" style="background: #8A9BD2;"></div>
 		<div class="skill-bar-percent">1%</div>
 	</div>
 </div>	
@@ -163,7 +142,9 @@ jQuery(document).ready(function(){
 			<span id="national_party_output" style="color: white; font-size: 40px;font-family: '.萍方-简'; position: absolute;top: 89px; left:827px;">01</span>
 			<span id="act_party_output" style="color: white; font-size: 40px;font-family: '.萍方-简'; position: absolute;top: 210px; left:845px;">01</span>
 		</div>
+		</div>
 	</div>
+
 </div>
 
 	
@@ -193,15 +174,15 @@ jQuery(document).ready(function(){
 <!--切换头div，从大选实时得票率到换算成席位-->	
 <script>    	
 	function switchVisible() {
-		if (document.getElementById('div1')) {
+		if (document.getElementById('Div1')) {
 
-			if (document.getElementById('div1').style.display == 'none') {
-				document.getElementById('div1').style.display = 'block';
-				document.getElementById('div2').style.display = 'none';
+			if (document.getElementById('Div1').style.display == 'none') {
+				document.getElementById('Div1').style.display = 'block';
+				document.getElementById('Div2').style.display = 'none';
 			}
 			else {
-				document.getElementById('div1').style.display = 'none';
-				document.getElementById('div2').style.display = 'block';
+				document.getElementById('Div1').style.display = 'none';
+				document.getElementById('Div2').style.display = 'block';
 			}
 		}
 }
@@ -228,9 +209,9 @@ jQuery(document).ready(function(){
 					<th class="table_first_title" style="background-color: #2583C3; "><img src="img/1x/Asset 2.png" width="80" height="28" alt=""/><br>国家党<br>National</th>
 					<th class="table_first_title" style="background-color: #084924;"><img src="img/1x/Asset 3.png" width="57" height="19" alt=""/><br>绿党
 					<br>Green</th>
-					<th class="table_first_title" style="background-color: #FCD20C; color: #24AAE2"><img src="img/1x/Asset 6.png" width="55" height="22" alt=""/><br>行动党<br>Act</th>
 					<th class="table_first_title" style="background-color: #666766;"><img src="img/1x/Asset 4.png" width="61" height="17" alt=""/><br>优先党<br>First</th>
 					<th class="table_first_title" style="background-color: #050606;"><img src="img/1x/Asset 5.png" width="56" height="17" alt=""/><br>毛利党<br>Maori</th>
+					<th class="table_first_title" style="background-color: #FCD20C; color: #24AAE2"><img src="img/1x/Asset 6.png" width="55" height="22" alt=""/><br>行动党<br>Act</th>
 					<th class="table_first_title" style="background-color: #E0E1E2; color: #000000;"><img src="img/1x/Asset 7.png" alt=""/><br>保守党<br>people's</th>
 				</tr>
 	  </thead>
