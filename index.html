@@ -94,24 +94,7 @@ jQuery(document).ready(function(){
 			var green_party_data = document.getElementById('green_party_original').innerHTML
 		</script>
 	</div>
-	<!--2020年优先党得票率统计-->
-	<div class="skillbar clearfix " data-percent="2%">
-		<div class="skillbar-title" style="background: #214321;"><span>优先党</span></div>
-		<div class="skillbar-bar" style="background: #666766;"></div>
-		<div class="skill-bar-percent" id="first_party_original">2%</div>
-		
-		<script>
-			 var first_party_data = document.getElementById('first_party_original').innerHTML
-		</script>
-		
-	</div>
-	<!--2020年毛利党得票率统计-->
-	<div class="skillbar clearfix " data-percent="1%">
-		<div class="skillbar-title" style="background: #980c13;"><span>毛利党</span></div>
-		<div class="skillbar-bar" style="background: #EA242D;"></div>
-		<div class="skill-bar-percent">1%</div>
-	</div>
-
+	
 	<div class="skillbar clearfix " data-percent="3%">
 		<div class="skillbar-title" style="background: #a48804;"><span>行动党</span></div>
 		<div class="skillbar-bar" style="background: #FCD20C;"></div>
@@ -122,9 +105,35 @@ jQuery(document).ready(function(){
 		</script>
 		
 	</div>
+	
+	<!--2020年优先党得票率统计-->
+	<div class="skillbar clearfix " data-percent="2%">
+		<div class="skillbar-title" style="background: #214321;"><span>优先党</span></div>
+		<div class="skillbar-bar" style="background: #666766;"></div>
+		<div class="skill-bar-percent" id="first_party_original">2%</div>
+		
+		<script>
+			 var first_party_data = document.getElementById('first_party_original').innerHTML
+		</script>
+	</div>
+	
+	<!--2020年毛利党得票率统计-->
+	<div class="skillbar clearfix " data-percent="1%">
+		<div class="skillbar-title" style="background: #980c13;"><span>毛利党</span></div>
+		<div class="skillbar-bar" style="background: #EA242D;"></div>
+		<div class="skill-bar-percent">1%</div>
+	</div>
+
 	<!--2020年保守党得票率统计-->
 	<div class="skillbar clearfix " data-percent="1%">
 		<div class="skillbar-title" style="background: #496e93;"><span>保守党</span></div>
+		<div class="skillbar-bar" style="background: #E0E1E2;"></div>
+		<div class="skill-bar-percent">1%</div>
+	</div>
+	
+	<!--2020年机遇党得票率统计-->
+	<div class="skillbar clearfix " data-percent="1%">
+		<div class="skillbar-title" style="background: #496e93;"><span>机遇党</span></div>
 		<div class="skillbar-bar" style="background: #E0E1E2;"></div>
 		<div class="skill-bar-percent">1%</div>
 	</div>
@@ -203,20 +212,21 @@ jQuery(document).ready(function(){
   <div>
 	<table>
 	  <thead>
-				<tr class="red">
-					<th class="table_first_title" style="width: 35px;"></th>
-					<th class="table_first_title" style="background-color: #D72E27; "><img src="img/1x/Asset 1.png" width="89" height="24" alt=""/><br>工党<br>Labour</th>
-					<th class="table_first_title" style="background-color: #2583C3; "><img src="img/1x/Asset 2.png" width="80" height="28" alt=""/><br>国家党<br>National</th>
-					<th class="table_first_title" style="background-color: #084924;"><img src="img/1x/Asset 3.png" width="57" height="19" alt=""/><br>绿党
-					<br>Green</th>
-					<th class="table_first_title" style="background-color: #666766;"><img src="img/1x/Asset 4.png" width="61" height="17" alt=""/><br>优先党<br>First</th>
-					<th class="table_first_title" style="background-color: #050606;"><img src="img/1x/Asset 5.png" width="56" height="17" alt=""/><br>毛利党<br>Maori</th>
-					<th class="table_first_title" style="background-color: #FCD20C; color: #24AAE2"><img src="img/1x/Asset 6.png" width="55" height="22" alt=""/><br>行动党<br>Act</th>
-					<th class="table_first_title" style="background-color: #E0E1E2; color: #000000;"><img src="img/1x/Asset 7.png" alt=""/><br>保守党<br>people's</th>
-				</tr>
+		<tr class="red">
+			<th class="table_first_title" style="width: 35px;"></th>
+			<th class="table_first_title" style="background-color: #D72E27; "><img src="img/1x/Asset 1.png" width="89" height="24" alt=""/><br>工党<br>Labour</th>
+			<th class="table_first_title" style="background-color: #2583C3; "><img src="img/1x/Asset 2.png" width="80" height="28" alt=""/><br>国家党<br>National</th>
+			<th class="table_first_title" style="background-color: #084924;"><img src="img/1x/Asset 3.png" width="57" height="19" alt=""/><br>绿党<br>Green</th>
+			<th class="table_first_title" style="background-color: #FCD20C; color: #24AAE2"><img src="img/1x/Asset 6.png" width="55" height="22" alt=""/><br>行动党<br>Act</th>
+			<th class="table_first_title" style="background-color: #666766;"><img src="img/1x/Asset 4.png" width="61" height="17" alt=""/><br>优先党<br>First</th>
+			<th class="table_first_title" style="background-color: #050606;"><img src="img/1x/Asset 5.png" width="56" height="17" alt=""/><br>毛利党<br>Maori</th>
+			<th class="table_first_title" style="background-color: #E0E1E2; color: #000000;"><img src="img/1x/Asset 7.png" alt=""/><br>保守党<br>people's</th>
+			<th class="table_first_title" style="background-color: #E0E1E2; color: #000000;"><img src="img/1x/Asset 7.png" alt=""/><br>机遇党<br>people's</th>
+		</tr>
 	  </thead>
 		<tr>
 			<td>经济政策</td>
+			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
@@ -233,6 +243,7 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -241,6 +252,9 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
+			<td class="pre-update">
+				
+			</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
@@ -248,6 +262,9 @@ jQuery(document).ready(function(){
 		<tr>
 			<td>交通政策</td>
 			<td class="pre-update">Updating</td>
+			<td class="pre-update">
+				•310亿交通投资（包括第二座海港大桥，高速）
+			</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
@@ -257,6 +274,7 @@ jQuery(document).ready(function(){
 		</tr>
 		<tr>
 			<td>治安政策</td>
+			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
@@ -273,10 +291,12 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
 			<td>教育政策</td>
+			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
@@ -293,10 +313,12 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
+			<td class="pre-update">Updating</td>
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
 			<td>难民政策</td>
+			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
