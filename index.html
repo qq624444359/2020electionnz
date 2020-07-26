@@ -51,22 +51,22 @@ jQuery(document).ready(function(){
 <!--DIV1 大选的实时的得票率统计-->
 <div class="bar_block" id="div1" style="display:block;">	
 	<h1 class="top_title" style="color: #FFFFFF;">2020年大选投票率统计</h1>	
-	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出10%票</h1>
+	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出0%票</h1>
 		<script>
 			var dt = new Date();
 			document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 		</script>
 	<!--2020年现场开票率统计-->
-	<div class="program_skillbar clearfix " data-percent="10%">
+	<div class="program_skillbar clearfix " data-percent="0%">
 		<div class="program_skillbar-bar" style="background: #D72E27;"></div>
 		<div class="program_skill-bar-percent"></div>
 	</div>
 	<div class="space"></div>
 	<!--2020年工党得票率统计-->
-	<div class="skillbar clearfix " data-percent="54.5%">
+	<div class="skillbar clearfix " data-percent="60.9%">
 		<div class="skillbar-title" style="background: #8c130d;"><span>工党</span></div>
 		<div class="skillbar-bar" style="background: #D72E27;"></div>
-		<div class="skill-bar-percent" id="labor_party_original">54.5%</div>
+		<div class="skill-bar-percent" id="labor_party_original">60.9%</div>
 		
 		<script>
 			 var labor_party_data = document.getElementById('labor_party_original').innerHTML
@@ -74,10 +74,10 @@ jQuery(document).ready(function(){
 		
 	</div>
 	<!--2020年国家党得票率统计-->
-	<div class="skillbar clearfix " data-percent="27%">
+	<div class="skillbar clearfix " data-percent="25.1%">
 		<div class="skillbar-title" style="background: #0c4f7f;"><span>国家党</span></div>
 		<div class="skillbar-bar" style="background: #2583C3;"></div>
-		<div class="skill-bar-percent" id="national_party_original">27%</div>
+		<div class="skill-bar-percent" id="national_party_original">25.1%</div>
 			
 		<script>
 			 var national_party_data = document.getElementById('national_party_original').innerHTML
@@ -85,20 +85,21 @@ jQuery(document).ready(function(){
 		
 	</div>
 	<!--2020年绿党得票率统计-->
-	<div class="skillbar clearfix " data-percent="9%">
+	<div class="skillbar clearfix " data-percent="5.7%">
 		<div class="skillbar-title" style="background: #032f16;"><span>绿党</span></div>
 		<div class="skillbar-bar" style="background: #084924;"></div>
-		<div class="skill-bar-percent" id="green_party_original">9%</div>
+		<div class="skill-bar-percent" id="green_party_original">5.7%</div>
 		
 		<script>
 			var green_party_data = document.getElementById('green_party_original').innerHTML
 		</script>
 	</div>
 	
-	<div class="skillbar clearfix " data-percent="5%">
+	<!--2020年行动党得票率统计-->
+	<div class="skillbar clearfix " data-percent="3.3%">
 		<div class="skillbar-title" style="background: #a48804;"><span>行动党</span></div>
 		<div class="skillbar-bar" style="background: #FCD20C;"></div>
-		<div class="skill-bar-percent" id="act_party_original">5%</div>
+		<div class="skill-bar-percent" id="act_party_original">3.3%</div>
 		
 		<script>
 			 var act_party_data = document.getElementById('act_party_original').innerHTML
@@ -107,10 +108,10 @@ jQuery(document).ready(function(){
 	</div>
 	
 	<!--2020年优先党得票率统计-->
-	<div class="skillbar clearfix " data-percent="1.5%">
+	<div class="skillbar clearfix " data-percent="2%">
 		<div class="skillbar-title" style="background: #214321;"><span>优先党</span></div>
 		<div class="skillbar-bar" style="background: #666766;"></div>
-		<div class="skill-bar-percent" id="first_party_original">1.5%</div>
+		<div class="skill-bar-percent" id="first_party_original">2%</div>
 		
 		<script>
 			 var first_party_data = document.getElementById('first_party_original').innerHTML
@@ -118,18 +119,19 @@ jQuery(document).ready(function(){
 	</div>
 	
 	<!--2020年毛利党得票率统计-->
-	<div class="skillbar clearfix " data-percent="1%">
+	<div class="skillbar clearfix " data-percent="0.4%">
 		<div class="skillbar-title" style="background: #980c13;"><span>毛利党</span></div>
 		<div class="skillbar-bar" style="background: #EA242D;"></div>
-		<div class="skill-bar-percent">1%</div>
+		<div class="skill-bar-percent">0.4%</div>
 	</div>
 
-	<!--2020年保守党得票率统计-->
+	<!--2020年保守党得票率统计
 	<div class="skillbar clearfix " data-percent="1%">
 		<div class="skillbar-title" style="background: #496e93;"><span>保守党</span></div>
 		<div class="skillbar-bar" style="background: #E0E1E2;"></div>
 		<div class="skill-bar-percent">1%</div>
 	</div>
+	-->
 </div>	
 	
 <!--DIV2 换算为各党派席位统计-->
@@ -213,7 +215,7 @@ jQuery(document).ready(function(){
 			<th class="table_first_title" style="background-color: #FCD20C; color: #24AAE2"><img src="img/1x/Asset 6.png" width="55" height="22" alt=""/><br>行动党<br>Act</th>
 			<th class="table_first_title" style="background-color: #666766;"><img src="img/1x/Asset 4.png" width="61" height="17" alt=""/><br>优先党<br>First</th>
 			<th class="table_first_title" style="background-color: #050606;"><img src="img/1x/Asset 5.png" width="56" height="17" alt=""/><br>毛利党<br>Maori</th>
-			<th class="table_first_title" style="background-color: #E0E1E2; color: #000000;"><img src="img/1x/Asset 7.png" alt=""/><br>保守党<br>people's</th>
+			<!--<th class="table_first_title" style="background-color: #E0E1E2; color: #000000;"><img src="img/1x/Asset 7.png" alt=""/><br>保守党<br>people's</th>-->
 		</tr>
 	  </thead>
 		<tr>
@@ -223,8 +225,7 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
-		
-			<td class="pre-update">Updating</td>
+		<!--    <td class="pre-update">Updating</td>   -->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -234,8 +235,7 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
-	
-			<td class="pre-update">Updating</td>
+			<!--<td class="pre-update">Updating</td>-->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -247,8 +247,7 @@ jQuery(document).ready(function(){
 			<td>
 				• 移民人数控制在15,000/年以下
 			</td>
-			<td class="pre-update">Updating</td>
-	
+			<!--<td class="pre-update">Updating</td>-->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -260,8 +259,7 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
-			<td class="pre-update">Updating</td>
-			
+			<!--<td class="pre-update">Updating</td>-->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -273,8 +271,7 @@ jQuery(document).ready(function(){
 			<td>
 				• 警察问题：继续增加一线警察
 			</td>
-			<td class="pre-update">Updating</td>
-		
+			<!--<td class="pre-update">Updating</td>-->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -286,8 +283,7 @@ jQuery(document).ready(function(){
 			<td>
 				• 16岁以下儿童都将获得津贴
 			</td>
-			<td class="pre-update">Updating</td>
-		
+			<!--<td class="pre-update">Updating</td>-->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -310,8 +306,7 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
-			<td class="pre-update">Updating</td>
-		
+			<!--<td class="pre-update">Updating</td>-->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
 		<tr>
@@ -321,11 +316,9 @@ jQuery(document).ready(function(){
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
 			<td class="pre-update">Updating</td>
-			<td class="pre-update">Updating</td>
-			
+			<!--<td class="pre-update">Updating</td>-->
 			<td class="pre-update" style="border-right: none"><p>Updating</p></td>
 		</tr>
-
 	</table>
   </div>
 </div>
