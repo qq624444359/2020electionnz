@@ -51,22 +51,22 @@ jQuery(document).ready(function(){
 <!--DIV1 大选的实时的得票率统计-->
 <div class="bar_block" id="div1" style="display:block;">	
 	<h1 class="top_title" style="color: #FFFFFF;">2020年大选投票率统计</h1>	
-	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出52.6%票</h1>
+	<h1 style="font-family: '.萍方-简';font-size: 21px;color:#9E9E9E ;">截止到 <span id="datetime"></span>, 已经开出70.2%票</h1>
 		<script>
 			var dt = new Date();
 			document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 		</script>
 	<!--2020年现场开票率统计-->
-	<div class="program_skillbar clearfix " data-percent="52.6%">
+	<div class="program_skillbar clearfix " data-percent="70.2%">
 		<div class="program_skillbar-bar" style="background: #D72E27;"></div>
 		<div class="program_skill-bar-percent"></div>
 	</div>
 	<div class="space"></div>
 	<!--2020年工党得票率统计-->
-	<div class="skillbar clearfix " data-percent="49.6%">
+	<div class="skillbar clearfix " data-percent="49.1%">
 		<div class="skillbar-title" style="background: #8c130d;"><span>工党</span></div>
 		<div class="skillbar-bar" style="background: #D72E27;"></div>
-		<div class="skill-bar-percent" id="labor_party_original">49.6%</div>
+		<div class="skill-bar-percent" id="labor_party_original">49.1%</div>
 		
 		<script>
 			 var labor_party_data = document.getElementById('labor_party_original').innerHTML
@@ -74,10 +74,10 @@ jQuery(document).ready(function(){
 		
 	</div>
 	<!--2020年国家党得票率统计-->
-	<div class="skillbar clearfix " data-percent="26.4%">
+	<div class="skillbar clearfix " data-percent="26.9%">
 		<div class="skillbar-title" style="background: #0c4f7f;"><span>国家党</span></div>
 		<div class="skillbar-bar" style="background: #2583C3;"></div>
-		<div class="skill-bar-percent" id="national_party_original">26.4%</div>
+		<div class="skill-bar-percent" id="national_party_original">26.9%</div>
 			
 		<script>
 			 var national_party_data = document.getElementById('national_party_original').innerHTML
@@ -85,10 +85,10 @@ jQuery(document).ready(function(){
 		
 	</div>
 	<!--2020年绿党得票率统计-->
-	<div class="skillbar clearfix " data-percent="7.9%">
+	<div class="skillbar clearfix " data-percent="8%">
 		<div class="skillbar-title" style="background: #032f16;"><span>绿党</span></div>
 		<div class="skillbar-bar" style="background: #084924;"></div>
-		<div class="skill-bar-percent" id="green_party_original">7.9%</div>
+		<div class="skill-bar-percent" id="green_party_original">8%</div>
 		
 		<script>
 			var green_party_data = document.getElementById('green_party_original').innerHTML
@@ -96,10 +96,10 @@ jQuery(document).ready(function(){
 	</div>
 	
 	<!--2020年行动党得票率统计-->
-	<div class="skillbar clearfix " data-percent="7.8%">
+	<div class="skillbar clearfix " data-percent="7.6%">
 		<div class="skillbar-title" style="background: #a48804;"><span>行动党</span></div>
 		<div class="skillbar-bar" style="background: #FCD20C;"></div>
-		<div class="skill-bar-percent" id="act_party_original">7.8%</div>
+		<div class="skill-bar-percent" id="act_party_original">7.6%</div>
 		
 		<script>
 			 var act_party_data = document.getElementById('act_party_original').innerHTML
@@ -120,10 +120,10 @@ jQuery(document).ready(function(){
 	
 	
 	<!--2020其他-->
-	<div class="skillbar clearfix " data-percent="8.2%">
+	<div class="skillbar clearfix " data-percent="7.5%">
 		<div class="skillbar-title" style="background: #980c13;"><span>其他</span></div>
 		<div class="skillbar-bar" style="background: #EA242D;"></div>
-		<div class="skill-bar-percent">8.2%</div>
+		<div class="skill-bar-percent">7.5%</div>
 	</div>
 
 	<!--【赞同】大麻合法化提案
